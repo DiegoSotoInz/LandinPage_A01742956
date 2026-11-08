@@ -1,0 +1,306 @@
+/* HOJA DE ESTILOS - HAIL MARY SINALOA 2026 (DARK THEME) */
+
+:root {
+    --bg-dark: #050914;
+    --bg-card: #0b1329;
+    --bg-card-hover: #121e3f;
+    --primary-blue: #0055ff;
+    --cyan-accent: #00d2ff;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --border-color: #1e293b;
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: rgba(5, 9, 20, 0.95);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-svg {
+    width: 45px;
+    height: 45px;
+}
+
+.brand-title {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    color: var(--text-main);
+    display: block;
+}
+
+.brand-sub {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--cyan-accent);
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cyan-accent);
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    padding: 100px 0 80px 0;
+    background: radial-gradient(circle at 50% 20%, #0d1b3e 0%, var(--bg-dark) 70%);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(0, 210, 255, 0.1);
+    border: 1px solid var(--cyan-accent);
+    color: var(--cyan-accent);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    max-width: 800px;
+    margin: 0 auto 35px auto;
+    color: var(--text-muted);
+    font-size: 1.3rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    border: 1px solid var(--primary-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--cyan-accent);
+    color: #000;
+    border-color: var(--cyan-accent);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    border-color: var(--cyan-accent);
+    color: var(--cyan-accent);
+}
+
+/* SECCIONES GUÍA */
+.section {
+    padding: 80px 0;
+}
+
+.section-dark {
+    background-color: #080d1e;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--cyan-accent);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+/* GRID & CARDS */
+.grid {
+    display: grid;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card, .stat-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover, .stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cyan-accent);
+}
+
+.card h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.stat-value {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--cyan-accent);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* TABLA DE RESULTADOS */
+.table-container {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.data-table th, .data-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+    background-color: rgba(0, 85, 255, 0.2);
+    font-family: var(--font-heading);
+    color: var(--cyan-accent);
+    font-size: 0.95rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.tag-success {
+    background-color: rgba(0, 210, 255, 0.2);
+    color: var(--cyan-accent);
+    border: 1px solid var(--cyan-accent);
+}
+
+/* FOOTER */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 30px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
