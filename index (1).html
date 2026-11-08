@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAIL MARY | Misión Espacial Sinaloa 2026</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="brand">
+                <div class="logo-placeholder" title="Emblema Hail Mary">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#050914" stroke="#00d2ff" stroke-width="2.5"/>
+                        <path d="M50 12 L62 45 L50 40 L38 45 Z" fill="#ffffff" stroke="#0055ff" stroke-width="1.5"/>
+                        <path d="M50 40 L50 88" stroke="#00d2ff" stroke-width="4" stroke-linecap="round"/>
+                        <ellipse cx="50" cy="52" rx="36" ry="12" fill="none" stroke="#0055ff" stroke-width="2" transform="rotate(-15 50 52)"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">HAIL MARY</span>
+                    <span class="brand-sub">SINALOA • 2026</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#mision">Misión</a>
+                <a href="#modelo">Modelo Predictivo</a>
+                <a href="#resultados">Resultados</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <div class="badge">PROYECTO AEROESPACIAL SINALOA 2026</div>
+            <h1 class="hero-title">Lanzamiento y Predicción de Trayectoria Espacial</h1>
+            <p class="hero-subtitle">
+                Plataforma oficial de análisis para la simulación aerodinámica, telemetría en tiempo real y validación del modelo de vuelo del cohete <strong>HAIL MARY</strong>.
+            </p>
+            <div class="hero-actions">
+                <a href="#modelo" class="btn btn-primary">Ver Modelo Predictivo</a>
+                <a href="#resultados" class="btn btn-secondary">Explorar Resultados</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="mision" class="section">
+        <div class="container">
+            <h2 class="section-title">La Misión HAIL MARY</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Objetivo General</h3>
+                    <p>Desarrollar y validar una metodología matemática e ingenieril para predecir con alta precisión el comportamiento, apogeo y punto de impacto de cohetes experimentales en el estado de Sinaloa.</p>
+                </div>
+                <div class="card">
+                    <h3>Enfoque Divulgativo</h3>
+                    <p>Acercar la tecnología y la ciencia aeroespacial a la comunidad sinaloense a través de modelos abiertos, telemetría transparente y documentación clara para estudiantes e investigadores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modelo" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Modelo Predictivo y Física del Vuelo</h2>
+            <p class="section-desc">El modelo simula dinámicamente la trayectoria considerando la masa variable por quema de propelente, resistencia aerodinámica y vectores atmosféricos de Sinaloa.</p>
+            <div class="grid grid-3">
+                <div class="stat-card">
+                    <div class="stat-value">Ecuaciones EDO</div>
+                    <div class="stat-label">Modelado Cinemático</div>
+                    <p>Integración numérica continua (Runge-Kutta 4º orden) evaluando empuje, aceleración y arrastre.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Coeficiente Cd</div>
+                    <div class="stat-label">Perfil Aerodinámico</div>
+                    <p>Cálculo de la geometría y fricción del aire para garantizar la estabilidad pasiva y velocidad terminal.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Telemetría GPS</div>
+                    <div class="stat-label">Variables de Campo</div>
+                    <p>Captura e integración de densidad del aire, humedad, presión y viento en la zona de lanzamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resultados" class="section">
+        <div class="container">
+            <h2 class="section-title">Resultados del Lanzamiento</h2>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Parámetro de Vuelo</th>
+                            <th>Valor Predicho (Modelo)</th>
+                            <th>Valor Real (Telemetría)</th>
+                            <th>Precisión Obtenida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apogeo (Altitud Máxima)</td>
+                            <td>3,450 m</td>
+                            <td>3,412 m</td>
+                            <td><span class="tag tag-success">98.9%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Velocidad Máxima</td>
+                            <td>Mach 0.85</td>
+                            <td>Mach 0.83</td>
+                            <td><span class="tag tag-success">97.6%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tiempo hasta el Apogeo</td>
+                            <td>28.4 s</td>
+                            <td>28.9 s</td>
+                            <td><span class="tag tag-success">98.2%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Desviación del Punto de Impacto</td>
+                            <td>120 m</td>
+                            <td>105 m</td>
+                            <td><span class="tag tag-success">Excelente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 HAIL MARY SINALOA — Proyecto Aeroespacial. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
