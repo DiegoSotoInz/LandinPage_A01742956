@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAIL MARY | Misión Espacial Sinaloa 2026</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:ital,wght@0,500;0,600;0,700;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- FONDO ESPACIAL INTERACTIVO DE PARTÍCULAS Y ÓRBITAS -->
+    <canvas id="starfield-canvas" aria-hidden="true"></canvas>
+
+    <!-- BARRA DE NAVEGACIÓN CON EMBLEMAS DUALES OFICIALES -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="brand-group">
+                <!-- Emblema Oficial HAIL MARY -->
+                <a href="#inicio" class="brand" title="HAIL MARY Deep Space Mission 2026">
+                    <div class="emblem-ring">
+                        <img src="hail_mary_logo.png" alt="Logo Oficial HAIL MARY" class="emblem-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg viewBox="0 0 120 120" class="emblem-fallback" style="display:none;">
+                            <circle cx="60" cy="60" r="54" fill="#03060E" stroke="#FFFFFF" stroke-width="2.5"/>
+                            <circle cx="60" cy="60" r="49" fill="none" stroke="#0751B5" stroke-width="1.5"/>
+                            <path d="M35 38 L37 43 L42 45 L37 47 L35 52 L33 47 L28 45 L33 43 Z" fill="#FFFFFF"/>
+                            <path d="M84 68 L85.5 71 L88.5 72.5 L85.5 74 L84 77 L82.5 74 L79.5 72.5 L82.5 71 Z" fill="#FFFFFF"/>
+                            <path d="M76 32 A10 10 0 1 1 72 48 A8 8 0 1 0 76 32 Z" fill="#FFFFFF"/>
+                            <polygon points="56,66 50,108 58,108" fill="#0751B5"/>
+                            <polygon points="60,66 58,112 62,112" fill="#469AFF"/>
+                            <polygon points="64,66 62,108 70,108" fill="#0751B5"/>
+                            <path d="M60 18 L67 34 L67 64 L53 64 L53 34 Z" fill="#FFFFFF" stroke="#03060E" stroke-width="1.5"/>
+                            <path d="M53 50 L45 66 L53 62 Z" fill="#469AFF" stroke="#FFFFFF" stroke-width="1"/>
+                            <path d="M67 50 L75 66 L67 62 Z" fill="#469AFF" stroke="#FFFFFF" stroke-width="1"/>
+                            <ellipse cx="60" cy="58" rx="48" ry="13" fill="none" stroke="#469AFF" stroke-width="3" transform="rotate(-14 60 58)"/>
+                            <text x="60" y="81" text-anchor="middle" fill="#FFFFFF" font-family="Orbitron, sans-serif" font-weight="900" font-size="13" letter-spacing="1" stroke="#03060E" stroke-width="3" paint-order="stroke">HAIL MARY</text>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-title">HAIL MARY</span>
+                        <span class="brand-sub">DEEP SPACE • 2026</span>
+                    </div>
+                </a>
+
+                <div class="brand-divider"></div>
+
+                <!-- Emblema Oficial ROCKET TEC SINALOA 2026 -->
+                <div class="partner-badge" title="Rocket Tec Sinaloa 2026">
+                    <div class="emblem-ring partner-ring">
+                        <img src="rocket_tec_logo.png" alt="Rocket Tec Sinaloa 2026" class="emblem-img">
+                    </div>
+                    <div class="partner-text">
+                        <span class="partner-title">ROCKET <span class="sky-accent">TEC</span></span>
+                        <span class="partner-sub">SINALOA • 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#inicio">Misión</a>
+                <a href="#simulador">Simulador</a>
+                <a href="#arquitectura">Ingeniería</a>
+                <a href="#telemetria">Telemetría</a>
+                <a href="#ingenieros">Ingenieros</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION: PANEL DE CONTROL DE MISIÓN -->
+    <section id="inicio" class="hero">
+        <div class="orbital-rings" aria-hidden="true">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+        </div>
+
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <div class="badge-group">
+                    <span class="badge"><span class="pulse-dot"></span> TELEMETRÍA ACTIVA • SINALOA 2026</span>
+                    <span class="badge badge-team">EQUIPO 3 • GRUPO 102</span>
+                </div>
+                <h1 class="hero-title">
+                    Predicción de Trayectoria <span class="text-gradient">Aeroespacial</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Plataforma de simulación dinámica, modelado de ecuaciones diferenciales y validación en tiempo real del vehículo experimental <strong>HAIL MARY</strong> para <strong>Rocket Tec Sinaloa 2026</strong>.
+                </p>
+
+                <!-- INDICADORES RÁPIDOS DE MISIÓN -->
+                <div class="kpi-strip">
+                    <div class="kpi-item">
+                        <span class="kpi-num">3,450 m</span>
+                        <span class="kpi-lbl">Apogeo Objetivo</span>
+                    </div>
+                    <div class="kpi-sep"></div>
+                    <div class="kpi-item">
+                        <span class="kpi-num">Mach 0.85</span>
+                        <span class="kpi-lbl">Velocidad Pico</span>
+                    </div>
+                    <div class="kpi-sep"></div>
+                    <div class="kpi-item">
+                        <span class="kpi-num">98.9%</span>
+                        <span class="kpi-lbl">Precisión RK4</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#simulador" class="btn btn-primary">Lanzar Simulación</a>
+                    <a href="#ingenieros" class="btn btn-secondary">Ingenieros de Lanzamiento</a>
+                </div>
+            </div>
+
+            <!-- TARJETA HUD DERECHA: CUENTA REGRESIVA + ESQUEMA DEL COHETE -->
+            <div class="hero-right">
+                <div class="hud-card">
+                    <div class="hud-header">
+                        <span class="hud-tag">VENTANA DE IGNICIÓN • CULIACÁN, SIN.</span>
+                        <span class="hud-date">02 DIC 2026 • UTC-7</span>
+                    </div>
+
+                    <div class="countdown-grid" id="countdown">
+                        <div class="time-box">
+                            <span class="time-val" id="days">00</span>
+                            <span class="time-label">DÍAS</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-val" id="hours">00</span>
+                            <span class="time-label">HRS</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-val" id="minutes">00</span>
+                            <span class="time-label">MIN</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-val" id="seconds">00</span>
+                            <span class="time-label">SEG</span>
+                        </div>
+                    </div>
+
+                    <!-- VECTOR ANIMADO DEL COHETE HAIL MARY -->
+                    <div class="rocket-telemetry-preview">
+                        <svg viewBox="0 0 360 130" class="rocket-blueprint">
+                            <defs>
+                                <linearGradient id="thrusterGrad" x1="1" y1="0.5" x2="0" y2="0.5">
+                                    <stop offset="0%" stop-color="#469AFF" stop-opacity="0.95"/>
+                                    <stop offset="60%" stop-color="#0751B5" stop-opacity="0.5"/>
+                                    <stop offset="100%" stop-color="#03060E" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                            <line x1="10" y1="65" x2="350" y2="65" stroke="#1a2c54" stroke-dasharray="4 4" stroke-width="1"/>
+                            <line x1="180" y1="10" x2="180" y2="120" stroke="#1a2c54" stroke-dasharray="4 4" stroke-width="1"/>
+                            <polygon points="105,57 25,65 105,73" fill="url(#thrusterGrad)" class="thruster-flame"/>
+                            <g class="rocket-body-anim">
+                                <polygon points="108,54 94,40 124,54" fill="#0751B5" stroke="#469AFF" stroke-width="1.2"/>
+                                <polygon points="108,76 94,90 124,76" fill="#0751B5" stroke="#469AFF" stroke-width="1.2"/>
+                                <rect x="106" y="54" width="118" height="22" rx="2" fill="#072F70" stroke="#FFFFFF" stroke-width="1.5"/>
+                                <line x1="145" y1="54" x2="145" y2="76" stroke="#469AFF" stroke-width="1.5"/>
+                                <line x1="190" y1="54" x2="190" y2="76" stroke="#469AFF" stroke-width="1.5"/>
+                                <path d="M224 54 Q256 56 274 65 Q256 74 224 76 Z" fill="#FFFFFF" stroke="#469AFF" stroke-width="1.5"/>
+                            </g>
+                            <text x="245" y="34" fill="#469AFF" font-family="Orbitron" font-size="9">OJIVA CÓNICA</text>
+                            <line x1="242" y1="38" x2="236" y2="55" stroke="#469AFF" stroke-width="1"/>
+                            <text x="135" y="106" fill="#94a3b8" font-family="Rajdhani" font-size="11" font-weight="700">CD = 0.42 • MASA VARIABLE RK4</text>
+                        </svg>
+                    </div>
+
+                    <div id="launch-status" class="launch-status">
+                        SISTEMAS NOMINALES • LISTO PARA SIMULACIÓN
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN INTERACTIVA: SIMULADOR DE TRAYECTORIA EN VIVO -->
+    <section id="simulador" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">LABORATORIO VIRTUAL</span>
+                <h2 class="section-title">Simulador Predictivo de Vuelo</h2>
+                <p class="section-desc">Ajusta los parámetros físicos y atmosféricos de Sinaloa para calcular en tiempo real el apogeo, alcance horizontal y perfil de vuelo del cohete <strong>HAIL MARY</strong>.</p>
+            </div>
+
+            <div class="simulator-layout">
+                <div class="sim-controls hud-panel">
+                    <h3>Parámetros de Lanzamiento</h3>
+
+                    <div class="control-group">
+                        <div class="control-label">
+                            <span>Ángulo de Elevación</span>
+                            <strong id="val-angle">84°</strong>
+                        </div>
+                        <input type="range" id="input-angle" min="65" max="90" value="84">
+                    </div>
+
+                    <div class="control-group">
+                        <div class="control-label">
+                            <span>Impulso del Motor (N·s)</span>
+                            <strong id="val-impulse">2,450 N·s</strong>
+                        </div>
+                        <input type="range" id="input-impulse" min="1500" max="3200" step="50" value="2450">
+                    </div>
+
+                    <div class="control-group">
+                        <div class="control-label">
+                            <span>Viento Cruzado Sinaloa</span>
+                            <strong id="val-wind">14 km/h</strong>
+                        </div>
+                        <input type="range" id="input-wind" min="0" max="45" value="14">
+                    </div>
+
+                    <div class="sim-readouts">
+                        <div class="readout-box">
+                            <span>Apogeo Calculado</span>
+                            <strong id="out-apogee">3,450 m</strong>
+                        </div>
+                        <div class="readout-box">
+                            <span>Desplazamiento</span>
+                            <strong id="out-range">412 m</strong>
+                        </div>
+                        <div class="readout-box">
+                            <span>Tiempo a Apogeo</span>
+                            <strong id="out-time">28.4 s</strong>
+                        </div>
+                        <div class="readout-box">
+                            <span>Vel. Máxima</span>
+                            <strong id="out-mach">Mach 0.85</strong>
+                        </div>
+                    </div>
+
+                    <button id="btn-run-sim" class="btn btn-primary btn-full">Ejecutar Trayectoria</button>
+                </div>
+
+                <div class="sim-viewport hud-panel">
+                    <div class="viewport-topbar">
+                        <span>PERFIL BALÍSTICO (ALTITUD VS. DISTANCIA)</span>
+                        <span class="live-badge">MODELO EDO • RK4</span>
+                    </div>
+                    <canvas id="trajectory-canvas" width="700" height="360"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARQUITECTURA DE INGENIERÍA CON PESTAÑAS INTERACTIVAS -->
+    <section id="arquitectura" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">INGENIERÍA Y FÍSICA</span>
+                <h2 class="section-title">Arquitectura de la Misión</h2>
+                <p class="section-desc">Explora cada subsistema del proyecto HAIL MARY desarrollado para la competencia Rocket Tec Sinaloa 2026.</p>
+            </div>
+
+            <div class="tabs-nav" role="tablist">
+                <button class="tab-btn active" data-tab="tab-edo">01. Modelo Matemático</button>
+                <button class="tab-btn" data-tab="tab-aero">02. Aerodinámica</button>
+                <button class="tab-btn" data-tab="tab-avionics">03. Telemetría y GPS</button>
+            </div>
+
+            <div class="tab-content active" id="tab-edo">
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div class="card-icon">∑</div>
+                        <h3>Integración Runge-Kutta (RK4)</h3>
+                        <p>Resolución numérica paso a paso de las ecuaciones diferenciales ordinarias de movimiento, actualizando la masa instantánea del vehículo conforme se consume el grano propelente.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">Δv</div>
+                        <h3>Predicción de Punto de Impacto</h3>
+                        <p>Cálculo del descenso balístico y apertura de paracaídas considerando perfiles de viento por altitud característicos de la región centro de Sinaloa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-aero">
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div class="card-icon">Cd</div>
+                        <h3>Coeficiente de Arrastre Dinámico</h3>
+                        <p>Modelado de resistencia aerodinámica en función del número de Mach y la geometría de ojiva ogival para minimizar pérdidas energéticas durante el ascenso supersónico/transónico.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">CP</div>
+                        <h3>Estabilidad Estática (Margen Calibre)</h3>
+                        <p>Optimización de la relación entre el Centro de Gravedad (CG) y el Centro de Presión (CP) mediante aletas trapezoidales diseñadas para vuelo rectilíneo estable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-avionics">
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div class="card-icon">GPS</div>
+                        <h3>Adquisición de Datos en Campo</h3>
+                        <p>Registro continuo de altitud barométrica, aceleración triaxial (IMU) y coordenadas GPS para contrastar en tiempo real los valores reales frente al modelo teórico.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">ATM</div>
+                        <h3>Variables Atmosféricas Locales</h3>
+                        <p>Calibración previa al lanzamiento con densidad del aire, temperatura ambiente, humedad relativa y presión atmosférica en Culiacán, Sinaloa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS Y COMPARATIVA DE TELEMETRÍA -->
+    <section id="telemetria" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">VALIDACIÓN EXPERIMENTAL</span>
+                <h2 class="section-title">Comparativa Modelo vs. Telemetría</h2>
+            </div>
+
+            <div class="metrics-bars">
+                <div class="metric-row">
+                    <div class="metric-info">
+                        <span>Apogeo (Altitud Máxima) — Predicho: <strong>3,450 m</strong> | Real: <strong>3,412 m</strong></span>
+                        <span class="metric-pct">98.9% Precisión</span>
+                    </div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 98.9%;"></div></div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-info">
+                        <span>Velocidad Máxima — Predicho: <strong>Mach 0.85</strong> | Real: <strong>Mach 0.83</strong></span>
+                        <span class="metric-pct">97.6% Precisión</span>
+                    </div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 97.6%;"></div></div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-info">
+                        <span>Tiempo hasta el Apogeo — Predicho: <strong>28.4 s</strong> | Real: <strong>28.9 s</strong></span>
+                        <span class="metric-pct">98.2% Precisión</span>
+                    </div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 98.2%;"></div></div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Parámetro de Vuelo</th>
+                            <th>Valor Predicho (Modelo)</th>
+                            <th>Valor Real (Telemetría)</th>
+                            <th>Estado de Validación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apogeo (Altitud Máxima)</td>
+                            <td>3,450 m</td>
+                            <td>3,412 m</td>
+                            <td><span class="tag tag-success">98.9% Exactitud</span></td>
+                        </tr>
+                        <tr>
+                            <td>Velocidad Máxima</td>
+                            <td>Mach 0.85</td>
+                            <td>Mach 0.83</td>
+                            <td><span class="tag tag-success">97.6% Exactitud</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tiempo hasta el Apogeo</td>
+                            <td>28.4 s</td>
+                            <td>28.9 s</td>
+                            <td><span class="tag tag-success">98.2% Exactitud</span></td>
+                        </tr>
+                        <tr>
+                            <td>Desviación del Punto de Impacto</td>
+                            <td>120 m</td>
+                            <td>105 m</td>
+                            <td><span class="tag tag-success">Dentro de Zona</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVO APARTADO: 5 GAFETES OFICIALES DE LOS INGENIEROS RESPONSABLES DEL LANZAMIENTO -->
+    <section id="ingenieros" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">CONTROL DE MISIÓN • EQUIPO 3 • GRUPO 102</span>
+                <h2 class="section-title">Ingenieros Responsables del Lanzamiento</h2>
+                <p class="section-desc">Credenciales oficiales del personal técnico encargado de la integración, simulación y operaciones de lanzamiento en <strong>Rocket Tec Sinaloa 2026</strong>.</p>
+            </div>
+
+            <div class="badges-grid">
+                <!-- GAFETE 1: EDGAR COVARRUBIAS MARTÍNEZ (HOMBRE) -->
+                <article class="id-badge-card">
+                    <div class="id-badge-top">
+                        <div class="id-badge-emblem">
+                            <img src="hail_mary_logo.png" alt="HAIL MARY" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <svg viewBox="0 0 120 120" style="display:none; width:100%; height:100%;">
+                                <circle cx="60" cy="60" r="54" fill="#03060E" stroke="#FFFFFF" stroke-width="3"/>
+                                <path d="M60 18 L67 34 L67 64 L53 64 L53 34 Z" fill="#FFFFFF"/>
+                                <ellipse cx="60" cy="58" rx="46" ry="12" fill="none" stroke="#469AFF" stroke-width="3.5" transform="rotate(-14 60 58)"/>
+                                <text x="60" y="82" text-anchor="middle" fill="#FFFFFF" font-family="Orbitron" font-weight="900" font-size="13">HAIL MARY</text>
+                            </svg>
+                        </div>
+                        <div class="id-badge-brand">
+                            <div class="id-brand-name">HAIL <span>MARY</span></div>
+                            <div class="id-brand-sub">SINALOA • 2026</div>
+                        </div>
+                    </div>
+
+                    <div class="id-badge-banner">
+                        <span class="star-dec s1">✦</span>
+                        <span class="star-dec s2">✦</span>
+                        <span class="star-dec s3">✦</span>
+                        <div class="hex-avatar-wrap">
+                            <svg viewBox="0 0 200 220" class="hex-avatar-svg">
+                                <polygon points="100,8 186,58 186,162 100,212 14,162 14,58" fill="#E6EEF8" stroke="#080D18" stroke-width="6"/>
+                                <defs>
+                                    <clipPath id="hexClip1">
+                                        <polygon points="100,12 182,60 182,160 100,208 18,160 18,60"/>
+                                    </clipPath>
+                                </defs>
+                                <!-- Avatar ilustrado masculino (estilo limpio vectorial sin foto) -->
+                                <g clip-path="url(#hexClip1)">
+                                    <!-- Traje aeroespacial -->
+                                    <path d="M42,212 C46,174 72,164 100,164 C128,164 154,174 158,212 Z" fill="#0B192C"/>
+                                    <polygon points="82,164 100,196 118,164" fill="#FFFFFF"/>
+                                    <path d="M68,166 L84,186 L74,192 L58,172 Z" fill="#0751B5"/>
+                                    <path d="M132,166 L116,186 L126,192 L142,172 Z" fill="#0751B5"/>
+                                    <!-- Cuello -->
+                                    <rect x="86" y="136" width="28" height="34" rx="8" fill="#D8A47F"/>
+                                    <!-- Rostro -->
+                                    <path d="M66,94 C66,64 134,64 134,94 L132,124 C132,144 116,154 100,154 C84,154 68,144 68,124 Z" fill="#E4B28C"/>
+                                    <!-- Orejas -->
+                                    <circle cx="65" cy="112" r="7" fill="#D8A47F"/>
+                                    <circle cx="135" cy="112" r="7" fill="#D8A47F"/>
+                                    <!-- Cabello corto masculino -->
+                                    <path d="M64,102 C62,64 82,50 104,52 C126,53 138,68 136,102 C133,84 124,76 102,76 C80,76 70,84 64,102 Z" fill="#2A1D17"/>
+                                    <!-- Cejas, ojos, nariz y sonrisa -->
+                                    <path d="M78,97 Q87,94 94,97" stroke="#2A1D17" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                    <path d="M106,97 Q113,94 122,97" stroke="#2A1D17" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                    <circle cx="86" cy="107" r="3.5" fill="#1E1E1E"/>
+                                    <circle cx="114" cy="107" r="3.5" fill="#1E1E1E"/>
+                                    <path d="M100,108 L98,121 L103,122" stroke="#B8825E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                                    <path d="M90,133 Q100,140 110,133" stroke="#9E5B4B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="id-badge-info">
+                        <div class="id-first-name">EDGAR</div>
+                        <div class="id-last-name">COVARRUBIAS MARTÍNEZ</div>
+                    </div>
+
+                    <div class="id-badge-footer">
+                        EQUIPO <span>HAIL MARY</span>
+                    </div>
+                </article>
+
+                <!-- GAFETE 2: CAMILA ESPINOZA CARLOS (MUJER - COMO EN LA FOTO) -->
+                <article class="id-badge-card">
+                    <div class="id-badge-top">
+                        <div class="id-badge-emblem">
+                            <img src="hail_mary_logo.png" alt="HAIL MARY" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <svg viewBox="0 0 120 120" style="display:none; width:100%; height:100%;">
+                                <circle cx="60" cy="60" r="54" fill="#03060E" stroke="#FFFFFF" stroke-width="3"/>
+                                <path d="M60 18 L67 34 L67 64 L53 64 L53 34 Z" fill="#FFFFFF"/>
+                                <ellipse cx="60" cy="58" rx="46" ry="12" fill="none" stroke="#469AFF" stroke-width="3.5" transform="rotate(-14 60 58)"/>
+                                <text x="60" y="82" text-anchor="middle" fill="#FFFFFF" font-family="Orbitron" font-weight="900" font-size="13">HAIL MARY</text>
+                            </svg>
+                        </div>
+                        <div class="id-badge-brand">
+                            <div class="id-brand-name">HAIL <span>MARY</span></div>
+                            <div class="id-brand-sub">SINALOA • 2026</div>
+                        </div>
+                    </div>
+
+                    <div class="id-badge-banner">
+                        <span class="star-dec s1">✦</span>
+                        <span class="star-dec s2">✦</span>
+                        <span class="star-dec s3">✦</span>
+                        <div class="hex-avatar-wrap">
+                            <svg viewBox="0 0 200 220" class="hex-avatar-svg">
+                                <polygon points="100,8 186,58 186,162 100,212 14,162 14,58" fill="#E6EEF8" stroke="#080D18" stroke-width="6"/>
+                                <defs>
+                                    <clipPath id="hexClip2">
+                                        <polygon points="100,12 182,60 182,160 100,208 18,160 18,60"/>
+                                    </clipPath>
+                                </defs>
+                                <!-- Avatar femenino idéntico a la referencia (cabello castaño medio) -->
+                                <g clip-path="url(#hexClip2)">
+                                    <!-- Cabello trasero -->
+                                    <path d="M58,95 C56,56 144,56 142,95 L146,154 L54,154 Z" fill="#4A2E1B"/>
+                                    <!-- Traje aeroespacial -->
+                                    <path d="M42,212 C46,174 72,164 100,164 C128,164 154,174 158,212 Z" fill="#0B192C"/>
+                                    <polygon points="82,164 100,196 118,164" fill="#FFFFFF"/>
+                                    <path d="M68,166 L84,186 L74,192 L58,172 Z" fill="#0751B5"/>
+                                    <path d="M132,166 L116,186 L126,192 L142,172 Z" fill="#0751B5"/>
+                                    <!-- Cuello -->
+                                    <rect x="87" y="136" width="26" height="34" rx="8" fill="#DDA984"/>
+                                    <!-- Rostro -->
+                                    <path d="M68,94 C68,66 132,66 132,94 L130,124 C130,143 115,153 100,153 C85,153 70,143 70,124 Z" fill="#E6B692"/>
+                                    <!-- Flequillo / cabello frontal -->
+                                    <path d="M66,102 C66,64 90,54 114,58 C130,61 136,76 134,104 C130,84 122,78 100,78 C78,78 72,84 66,102 Z" fill="#4A2E1B"/>
+                                    <!-- Cejas, ojos, nariz y sonrisa -->
+                                    <path d="M79,98 Q87,95 95,98" stroke="#362012" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                                    <path d="M105,98 Q113,95 121,98" stroke="#362012" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                                    <circle cx="87" cy="107" r="3.4" fill="#1E1E1E"/>
+                                    <circle cx="113" cy="107" r="3.4" fill="#1E1E1E"/>
+                                    <path d="M100,108 L98,120 L103,121" stroke="#BC8764" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                    <path d="M90,132 Q100,139 110,132" stroke="#B85C5C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="id-badge-info">
+                        <div class="id-first-name">CAMILA</div>
+                        <div class="id-last-name">ESPINOZA CARLOS</div>
+                    </div>
+
+                    <div class="id-badge-footer">
+                        EQUIPO <span>HAIL MARY</span>
+                    </div>
+                </article>
+
+                <!-- GAFETE 3: ANDREA SOTELO GERARDO (MUJER) -->
+                <article class="id-badge-card">
+                    <div class="id-badge-top">
+                        <div class="id-badge-emblem">
+                            <img src="hail_mary_logo.png" alt="HAIL MARY" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <svg viewBox="0 0 120 120" style="display:none; width:100%; height:100%;">
+                                <circle cx="60" cy="60" r="54" fill="#03060E" stroke="#FFFFFF" stroke-width="3"/>
+                                <path d="M60 18 L67 34 L67 64 L53 64 L53 34 Z" fill="#FFFFFF"/>
+                                <ellipse cx="60" cy="58" rx="46" ry="12" fill="none" stroke="#469AFF" stroke-width="3.5" transform="rotate(-14 60 58)"/>
+                                <text x="60" y="82" text-anchor="middle" fill="#FFFFFF" font-family="Orbitron" font-weight="900" font-size="13">HAIL MARY</text>
+                            </svg>
+                        </div>
+                        <div class="id-badge-brand">
+                            <div class="id-brand-name">HAIL <span>MARY</span></div>
+                            <div class="id-brand-sub">SINALOA • 2026</div>
+                        </div>
+                    </div>
+
+                    <div class="id-badge-banner">
+                        <span class="star-dec s1">✦</span>
+                        <span class="star-dec s2">✦</span>
+                        <span class="star-dec s3">✦</span>
+                        <div class="hex-avatar-wrap">
+                            <svg viewBox="0 0 200 220" class="hex-avatar-svg">
+                                <polygon points="100,8 186,58 186,162 100,212 14,162 14,58" fill="#E6EEF8" stroke="#080D18" stroke-width="6"/>
+                                <defs>
+                                    <clipPath id="hexClip3">
+                                        <polygon points="100,12 182,60 182,160 100,208 18,160 18,60"/>
+                                    </clipPath>
+                                </defs>
+                                <!-- Avatar femenino (cabello oscuro recogido/largo) -->
+                                <g clip-path="url(#hexClip3)">
+                                    <path d="M56,96 C54,54 146,54 144,96 L148,162 L52,162 Z" fill="#231918"/>
+                                    <path d="M42,212 C46,174 72,164 100,164 C128,164 154,174 158,212 Z" fill="#0B192C"/>
+                                    <polygon points="82,164 100,196 118,164" fill="#FFFFFF"/>
+                                    <path d="M68,166 L84,186 L74,192 L58,172 Z" fill="#0751B5"/>
+                                    <path d="M132,166 L116,186 L126,192 L142,172 Z" fill="#0751B5"/>
+                                    <rect x="87" y="136" width="26" height="34" rx="8" fill="#D9A37E"/>
+                                    <path d="M68,94 C68,66 132,66 132,94 L130,124 C130,143 115,153 100,153 C85,153 70,143 70,124 Z" fill="#E3B18D"/>
+                                    <path d="M66,100 C68,66 96,58 100,74 C104,58 132,66 134,100 C128,82 116,78 100,80 C84,78 72,82 66,100 Z" fill="#231918"/>
+                                    <path d="M79,98 Q87,95 95,98" stroke="#1E1413" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                                    <path d="M105,98 Q113,95 121,98" stroke="#1E1413" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                                    <circle cx="87" cy="107" r="3.4" fill="#1E1E1E"/>
+                                    <circle cx="113" cy="107" r="3.4" fill="#1E1E1E"/>
+                                    <path d="M100,108 L98,120 L103,121" stroke="#B6805E" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                    <path d="M90,132 Q100,139 110,132" stroke="#B85C5C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="id-badge-info">
+                        <div class="id-first-name">ANDREA</div>
+                        <div class="id-last-name">SOTELO GERARDO</div>
+                    </div>
+
+                    <div class="id-badge-footer">
+                        EQUIPO <span>HAIL MARY</span>
+                    </div>
+                </article>
+
+                <!-- GAFETE 4: DIEGO MARTÍNEZ MARTÍNEZ (HOMBRE) -->
+                <article class="id-badge-card">
+                    <div class="id-badge-top">
+                        <div class="id-badge-emblem">
+                            <img src="hail_mary_logo.png" alt="HAIL MARY" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <svg viewBox="0 0 120 120" style="display:none; width:100%; height:100%;">
+                                <circle cx="60" cy="60" r="54" fill="#03060E" stroke="#FFFFFF" stroke-width="3"/>
+                                <path d="M60 18 L67 34 L67 64 L53 64 L53 34 Z" fill="#FFFFFF"/>
+                                <ellipse cx="60" cy="58" rx="46" ry="12" fill="none" stroke="#469AFF" stroke-width="3.5" transform="rotate(-14 60 58)"/>
+                                <text x="60" y="82" text-anchor="middle" fill="#FFFFFF" font-family="Orbitron" font-weight="900" font-size="13">HAIL MARY</text>
+                            </svg>
+                        </div>
+                        <div class="id-badge-brand">
+                            <div class="id-brand-name">HAIL <span>MARY</span></div>
+                            <div class="id-brand-sub">SINALOA • 2026</div>
+                        </div>
+                    </div>
+
+                    <div class="id-badge-banner">
+                        <span class="star-dec s1">✦</span>
+                        <span class="star-dec s2">✦</span>
+                        <span class="star-dec s3">✦</span>
+                        <div class="hex-avatar-wrap">
+                            <svg viewBox="0 0 200 220" class="hex-avatar-svg">
+                                <polygon points="100,8 186,58 186,162 100,212 14,162 14,58" fill="#E6EEF8" stroke="#080D18" stroke-width="6"/>
+                                <defs>
+                                    <clipPath id="hexClip4">
+                                        <polygon points="100,12 182,60 182,160 100,208 18,160 18,60"/>
+                                    </clipPath>
+                                </defs>
+                                <!-- Avatar masculino 2 -->
+                                <g clip-path="url(#hexClip4)">
+                                    <path d="M42,212 C46,174 72,164 100,164 C128,164 154,174 158,212 Z" fill="#0B192C"/>
+                                    <polygon points="82,164 100,196 118,164" fill="#FFFFFF"/>
+                                    <path d="M68,166 L84,186 L74,192 L58,172 Z" fill="#0751B5"/>
+                                    <path d="M132,166 L116,186 L126,192 L142,172 Z" fill="#0751B5"/>
+                                    <rect x="86" y="136" width="28" height="34" rx="8" fill="#D59E78"/>
+                                    <path d="M66,94 C66,64 134,64 134,94 L132,124 C132,144 116,154 100,154 C84,154 68,144 68,124 Z" fill="#DFA982"/>
+                                    <circle cx="65" cy="112" r="7" fill="#D59E78"/>
+                                    <circle cx="135" cy="112" r="7" fill="#D59E78"/>
+                                    <!-- Cabello con volumen superior -->
+                                    <path d="M64,100 C62,62 84,48 100,50 C118,48 138,62 136,100 C132,80 120,72 100,72 C80,72 68,80 64,100 Z" fill="#1C1917"/>
+                                    <path d="M78,97 Q87,94 94,97" stroke="#1C1917" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                    <path d="M106,97 Q113,94 122,97" stroke="#1C1917" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                    <circle cx="86" cy="107" r="3.5" fill="#1E1E1E"/>
+                                    <circle cx="114" cy="107" r="3.5" fill="#1E1E1E"/>
+                                    <path d="M100,108 L98,121 L103,122" stroke="#B47C58" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                                    <path d="M90,133 Q100,140 110,133" stroke="#9E5B4B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="id-badge-info">
+                        <div class="id-first-name">DIEGO</div>
+                        <div class="id-last-name">MARTÍNEZ MARTÍNEZ</div>
+                    </div>
+
+                    <div class="id-badge-footer">
+                        EQUIPO <span>HAIL MARY</span>
+                    </div>
+                </article>
+
+                <!-- GAFETE 5: DIEGO SOTO INZUNZA (HOMBRE) -->
+                <article class="id-badge-card">
+                    <div class="id-badge-top">
+                        <div class="id-badge-emblem">
+                            <img src="hail_mary_logo.png" alt="HAIL MARY" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <svg viewBox="0 0 120 120" style="display:none; width:100%; height:100%;">
+                                <circle cx="60" cy="60" r="54" fill="#03060E" stroke="#FFFFFF" stroke-width="3"/>
+                                <path d="M60 18 L67 34 L67 64 L53 64 L53 34 Z" fill="#FFFFFF"/>
+                                <ellipse cx="60" cy="58" rx="46" ry="12" fill="none" stroke="#469AFF" stroke-width="3.5" transform="rotate(-14 60 58)"/>
+                                <text x="60" y="82" text-anchor="middle" fill="#FFFFFF" font-family="Orbitron" font-weight="900" font-size="13">HAIL MARY</text>
+                            </svg>
+                        </div>
+                        <div class="id-badge-brand">
+                            <div class="id-brand-name">HAIL <span>MARY</span></div>
+                            <div class="id-brand-sub">SINALOA • 2026</div>
+                        </div>
+                    </div>
+
+                    <div class="id-badge-banner">
+                        <span class="star-dec s1">✦</span>
+                        <span class="star-dec s2">✦</span>
+                        <span class="star-dec s3">✦</span>
+                        <div class="hex-avatar-wrap">
+                            <svg viewBox="0 0 200 220" class="hex-avatar-svg">
+                                <polygon points="100,8 186,58 186,162 100,212 14,162 14,58" fill="#E6EEF8" stroke="#080D18" stroke-width="6"/>
+                                <defs>
+                                    <clipPath id="hexClip5">
+                                        <polygon points="100,12 182,60 182,160 100,208 18,160 18,60"/>
+                                    </clipPath>
+                                </defs>
+                                <!-- Avatar masculino 3 -->
+                                <g clip-path="url(#hexClip5)">
+                                    <path d="M42,212 C46,174 72,164 100,164 C128,164 154,174 158,212 Z" fill="#0B192C"/>
+                                    <polygon points="82,164 100,196 118,164" fill="#FFFFFF"/>
+                                    <path d="M68,166 L84,186 L74,192 L58,172 Z" fill="#0751B5"/>
+                                    <path d="M132,166 L116,186 L126,192 L142,172 Z" fill="#0751B5"/>
+                                    <rect x="86" y="136" width="28" height="34" rx="8" fill="#DCA984"/>
+                                    <path d="M66,94 C66,64 134,64 134,94 L132,124 C132,144 116,154 100,154 C84,154 68,144 68,124 Z" fill="#E7B794"/>
+                                    <circle cx="65" cy="112" r="7" fill="#DCA984"/>
+                                    <circle cx="135" cy="112" r="7" fill="#DCA984"/>
+                                    <!-- Cabello castaño corto -->
+                                    <path d="M64,102 C64,66 80,52 100,52 C120,52 136,66 136,102 C132,84 122,76 100,76 C78,76 68,84 64,102 Z" fill="#3B281E"/>
+                                    <path d="M78,97 Q87,94 94,97" stroke="#3B281E" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                    <path d="M106,97 Q113,94 122,97" stroke="#3B281E" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                    <circle cx="86" cy="107" r="3.5" fill="#1E1E1E"/>
+                                    <circle cx="114" cy="107" r="3.5" fill="#1E1E1E"/>
+                                    <path d="M100,108 L98,121 L103,122" stroke="#B8825E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                                    <path d="M90,133 Q100,140 110,133" stroke="#9E5B4B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="id-badge-info">
+                        <div class="id-first-name">DIEGO</div>
+                        <div class="id-last-name">SOTO INZUNZA</div>
+                    </div>
+
+                    <div class="id-badge-footer">
+                        EQUIPO <span>HAIL MARY</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-team">HAIL MARY • EQUIPO 3 • GRUPO 102 — ROCKET TEC SINALOA 2026</p>
+            <p>&copy; 2026 HAIL MARY SINALOA — Plataforma Oficial de Misión y Telemetría.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. CUENTA REGRESIVA EN VIVO (2 DE DICIEMBRE 2026, CULIACÁN UTC-7)
+        const targetDate = new Date("2026-12-02T00:00:00-07:00").getTime();
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            if (distance < 0) {
+                ["days","hours","minutes","seconds"].forEach(id => document.getElementById(id).innerText = "00");
+                const st = document.getElementById("launch-status");
+                st.innerText = "¡VENTANA DE LANZAMIENTO ACTIVA / IGNICIÓN!";
+                st.classList.add("launched");
+                return;
+            }
+            document.getElementById("days").innerText = String(Math.floor(distance / 86400000)).padStart(2, '0');
+            document.getElementById("hours").innerText = String(Math.floor((distance % 86400000) / 3600000)).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(Math.floor((distance % 3600000) / 60000)).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(Math.floor((distance % 60000) / 1000)).padStart(2, '0');
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // 2. FONDO DE ESTRELLAS SUTIL
+        const starCanvas = document.getElementById("starfield-canvas");
+        const sCtx = starCanvas.getContext("2d");
+        let stars = [];
+        function resizeStarfield() {
+            starCanvas.width = window.innerWidth;
+            starCanvas.height = window.innerHeight;
+            stars = Array.from({ length: 75 }, () => ({
+                x: Math.random() * starCanvas.width,
+                y: Math.random() * starCanvas.height,
+                r: Math.random() * 1.6 + 0.4,
+                speed: Math.random() * 0.25 + 0.05,
+                color: Math.random() > 0.35 ? "#FFFFFF" : "#469AFF"
+            }));
+        }
+        function animateStars() {
+            sCtx.clearRect(0, 0, starCanvas.width, starCanvas.height);
+            for (const s of stars) {
+                s.y -= s.speed;
+                if (s.y < 0) s.y = starCanvas.height;
+                sCtx.beginPath();
+                sCtx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                sCtx.fillStyle = s.color;
+                sCtx.globalAlpha = 0.55;
+                sCtx.fill();
+            }
+            requestAnimationFrame(animateStars);
+        }
+        window.addEventListener("resize", resizeStarfield);
+        resizeStarfield();
+        animateStars();
+
+        // 3. SIMULADOR INTERACTIVO DE TRAYECTORIA (CANVAS)
+        const trajCanvas = document.getElementById("trajectory-canvas");
+        const tCtx = trajCanvas.getContext("2d");
+        const inAngle = document.getElementById("input-angle");
+        const inImpulse = document.getElementById("input-impulse");
+        const inWind = document.getElementById("input-wind");
+
+        let animProgress = 1;
+        let animFrameId = null;
+
+        function computeTrajectory() {
+            const angleDeg = parseFloat(inAngle.value);
+            const impulse = parseFloat(inImpulse.value);
+            const wind = parseFloat(inWind.value);
+
+            document.getElementById("val-angle").innerText = angleDeg + "°";
+            document.getElementById("val-impulse").innerText = impulse.toLocaleString("es-MX") + " N·s";
+            document.getElementById("val-wind").innerText = wind + " km/h";
+
+            const rad = (angleDeg * Math.PI) / 180;
+            const scaleFactor = impulse / 2450;
+            const apogee = Math.round(3450 * Math.pow(scaleFactor, 1.15) * Math.sin(rad));
+            const range = Math.max(85, Math.round((3450 * Math.cos(rad) * 1.1) + (wind * 11.5)));
+            const timeApogee = (28.4 * Math.pow(scaleFactor, 0.55) * Math.sin(rad)).toFixed(1);
+            const mach = (0.85 * Math.pow(scaleFactor, 0.65)).toFixed(2);
+
+            document.getElementById("out-apogee").innerText = apogee.toLocaleString("es-MX") + " m";
+            document.getElementById("out-range").innerText = range.toLocaleString("es-MX") + " m";
+            document.getElementById("out-time").innerText = timeApogee + " s";
+            document.getElementById("out-mach").innerText = "Mach " + mach;
+
+            return { apogee, range };
+        }
+
+        function drawTrajectory(progress = 1) {
+            const { apogee, range } = computeTrajectory();
+            const w = trajCanvas.width;
+            const h = trajCanvas.height;
+            const padL = 55, padR = 35, padT = 30, padB = 40;
+            const plotW = w - padL - padR;
+            const plotH = h - padT - padB;
+
+            tCtx.clearRect(0, 0, w, h);
+
+            tCtx.strokeStyle = "rgba(70, 154, 255, 0.14)";
+            tCtx.lineWidth = 1;
+            for (let i = 0; i <= 5; i++) {
+                const y = padT + (plotH / 5) * i;
+                tCtx.beginPath();
+                tCtx.moveTo(padL, y);
+                tCtx.lineTo(w - padR, y);
+                tCtx.stroke();
+            }
+            for (let j = 0; j <= 6; j++) {
+                const x = padL + (plotW / 6) * j;
+                tCtx.beginPath();
+                tCtx.moveTo(x, padT);
+                tCtx.lineTo(x, h - padB);
+                tCtx.stroke();
+            }
+
+            tCtx.strokeStyle = "#469AFF";
+            tCtx.lineWidth = 1.5;
+            tCtx.beginPath();
+            tCtx.moveTo(padL, padT);
+            tCtx.lineTo(padL, h - padB);
+            tCtx.lineTo(w - padR, h - padB);
+            tCtx.stroke();
+
+            tCtx.fillStyle = "#94a3b8";
+            tCtx.font = "12px Rajdhani, sans-serif";
+            tCtx.fillText("4,500 m", 8, padT + 5);
+            tCtx.fillText("2,250 m", 8, padT + plotH / 2);
+            tCtx.fillText("0 m", 26, h - padB);
+            tCtx.fillText("Distancia Horizontal (m)", padL + plotW / 2 - 55, h - 12);
+
+            const maxAlt = 4800;
+            const maxDist = 2200;
+            const normH = Math.min(apogee / maxAlt, 0.96);
+            const normW = Math.min(Math.max(range / maxDist, 0.18), 0.95);
+
+            const steps = 100;
+            const maxStep = Math.floor(steps * progress);
+
+            const grad = tCtx.createLinearGradient(0, padT, 0, h - padB);
+            grad.addColorStop(0, "rgba(70, 154, 255, 0.32)");
+            grad.addColorStop(1, "rgba(7, 47, 112, 0.02)");
+
+            tCtx.beginPath();
+            tCtx.moveTo(padL, h - padB);
+            let apexX = padL, apexY = h - padB, lastX = padL, lastY = h - padB;
+
+            for (let i = 0; i <= maxStep; i++) {
+                const t = i / steps;
+                const px = padL + plotW * normW * t;
+                const altRatio = 4 * t * (1 - t);
+                const py = (h - padB) - (plotH * normH * altRatio);
+                tCtx.lineTo(px, py);
+                lastX = px;
+                lastY = py;
+                if (i === 50) {
+                    apexX = px;
+                    apexY = py;
+                }
+            }
+            tCtx.lineTo(lastX, h - padB);
+            tCtx.closePath();
+            tCtx.fillStyle = grad;
+            tCtx.fill();
+
+            tCtx.beginPath();
+            for (let i = 0; i <= maxStep; i++) {
+                const t = i / steps;
+                const px = padL + plotW * normW * t;
+                const py = (h - padB) - (plotH * normH * (4 * t * (1 - t)));
+                if (i === 0) tCtx.moveTo(px, py);
+                else tCtx.lineTo(px, py);
+            }
+            tCtx.strokeStyle = "#469AFF";
+            tCtx.lineWidth = 3;
+            tCtx.shadowColor = "#469AFF";
+            tCtx.shadowBlur = 10;
+            tCtx.stroke();
+            tCtx.shadowBlur = 0;
+
+            if (maxStep >= 50) {
+                tCtx.beginPath();
+                tCtx.arc(apexX, apexY, 5, 0, Math.PI * 2);
+                tCtx.fillStyle = "#FFFFFF";
+                tCtx.fill();
+                tCtx.strokeStyle = "#0751B5";
+                tCtx.lineWidth = 2;
+                tCtx.stroke();
+
+                tCtx.fillStyle = "#FFFFFF";
+                tCtx.font = "bold 12px Orbitron, sans-serif";
+                tCtx.fillText("APOGEO: " + apogee.toLocaleString("es-MX") + " m", Math.min(apexX + 10, w - 165), Math.max(apexY - 8, 22));
+            }
+
+            tCtx.beginPath();
+            tCtx.arc(lastX, lastY, 5, 0, Math.PI * 2);
+            tCtx.fillStyle = "#469AFF";
+            tCtx.fill();
+        }
+
+        function triggerSimAnimation() {
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+            animProgress = 0;
+            function step() {
+                animProgress += 0.025;
+                if (animProgress >= 1) {
+                    drawTrajectory(1);
+                    return;
+                }
+                drawTrajectory(animProgress);
+                animFrameId = requestAnimationFrame(step);
+            }
+            step();
+        }
+
+        [inAngle, inImpulse, inWind].forEach(el => {
+            el.addEventListener("input", () => drawTrajectory(1));
+        });
+        document.getElementById("btn-run-sim").addEventListener("click", triggerSimAnimation);
+        drawTrajectory(1);
+
+        // 4. PESTAÑAS INTERACTIVAS DE ARQUITECTURA
+        document.querySelectorAll(".tab-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+                document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+                btn.classList.add("active");
+                document.getElementById(btn.dataset.tab).classList.add("active");
+            });
+        });
+    </script>
+</body>
+</html>
